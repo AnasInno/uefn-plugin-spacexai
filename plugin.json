@@ -1,0 +1,42 @@
+{
+  "id": "spacexai",
+  "kind": "plugin",
+  "version": "1.0.1",
+  "label": "SpaceXAI",
+  "description": "SpaceXAI (Grok) API for Settings → LLMs. Install from Store → Gateways, then enable to show SpaceXAI under Providers & Keys.",
+  "min_app_version": "1.0.523",
+  "default_enabled": true,
+  "secret_keys": [
+    "spacexai"
+  ],
+  "contributes": {
+    "llm.providers": [
+      {
+        "id": "spacexai",
+        "label": "SpaceXAI",
+        "kind": "secret",
+        "secret_key": "spacexai",
+        "order": 42
+      }
+    ],
+    "walkthrough": {
+      "id": "spacexai",
+      "title": "Set up SpaceXAI",
+      "auto_start": "first_enable",
+      "settings_tab": "LLMs",
+      "steps": [
+        {
+          "target": "settings.llms.section.llms",
+          "title": "Providers & Keys",
+          "body": "SpaceXAI lives under Settings → LLMs. Open Providers & Keys to paste your API key from console.x.ai.",
+          "advance": "require_click",
+          "mode": "rect"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "entry": "backend",
+    "register": "register"
+  }
+}
