@@ -16,3 +16,7 @@ Writes `deploy/spacexai-1.0.1.ducky-plugin.zip` (scripts/ and deploy/ are not pa
 ## Secrets
 
 Never commit tokens or keys. The app stores `spacexai` locally (DPAPI), not in this package.
+
+## License
+
+MIT. Copyright (c) 2026 Mindful Path Company, LLC. See [LICENSE](LICENSE).
