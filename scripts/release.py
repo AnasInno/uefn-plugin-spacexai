@@ -16,7 +16,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
-from build_zip import build_zip  # noqa: E402
+from build_zip import build_zip
 
 
 class _NoRedirect(urllib.request.HTTPRedirectHandler):
