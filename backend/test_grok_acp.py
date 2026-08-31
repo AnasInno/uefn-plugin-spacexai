@@ -18,7 +18,7 @@ def test_build_grok_argv_owns_transport_model_and_effort() -> None:
         binary="grok",
         model="grok-4.6",
         reasoning_effort="high",
-        extra_args='--agent-profile "C:/Profiles/UEFN Agent.toml" --always-approve',
+        extra_args='--agent-profile "C:/Profiles/UEFN Agent.toml"',
     )
     assert argv[:3] == ["grok", "--no-auto-update", "agent"]
     assert argv[-1] == "stdio"
@@ -44,6 +44,10 @@ def test_build_grok_argv_uses_installed_cli_default() -> None:
         "--resume abc",
         "stdio",
         "--reauth",
+        "--always-approve",
+        "--yolo",
+        "--dangerously-skip-permissions",
+        "--allow-all",
     ],
 )
 def test_build_grok_argv_rejects_session_transport_overrides(extra: str) -> None:

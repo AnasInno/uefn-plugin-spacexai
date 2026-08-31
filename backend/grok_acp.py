@@ -120,6 +120,12 @@ def _validated_extra_args(raw: str) -> list[str]:
         "--reauthenticate",
         "--single",
         "-p",
+        "--always-approve",
+        "--approve-all",
+        "--yes",
+        "--yolo",
+        "--dangerously-skip-permissions",
+        "--allow-all",
     }
     forbidden_commands = {"agent", "stdio", "headless", "serve", "leader"}
     out: list[str] = []
