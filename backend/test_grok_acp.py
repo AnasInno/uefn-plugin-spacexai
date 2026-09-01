@@ -45,6 +45,8 @@ def test_build_grok_argv_uses_installed_cli_default() -> None:
         "stdio",
         "--reauth",
         "--always-approve",
+        "--approve-all",
+        "--yes",
         "--yolo",
         "--dangerously-skip-permissions",
         "--allow-all",
